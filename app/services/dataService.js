@@ -3,9 +3,13 @@
 angular.module('myApp').service('dataService', function ($q, $http) {
 
     var self = this;
-    self.dataArray = [];
-    self.c_id = null;
-    self.emp_id = null;
+    self.signup = function (data) {
+        return self.httpData('POST','',data);
+    }
+
+    self.login = function (data) {
+        return self.httpData('POST','',data);
+    }
 
     self.httpData = function (method, url, data) {
         return $q(function (resolve, reject) {

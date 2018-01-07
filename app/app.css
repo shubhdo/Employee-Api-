@@ -1,73 +1,31 @@
-/* app css stylesheet */
-
-.menu {
-    list-style: none;
-    border-bottom: 0.1em solid black;
-    margin-bottom: 2em;
-    padding: 0 0 0.5em;
-}
-
-/*.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}*/
-
-.menu > li {
+/* styles in src/style directory are applied to the whole page */
+body {
+    background-image: url("./images/health_service.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size:cover;
+    
+    color: #fff;
+  }
+  
+  a {
+    color: #03A9F4;
+  }
+  
+  main {
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 50px;
     display: block;
-    margin-left: 100px;
+  }
+  .home_tabs {
+    font-size: 20px;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.8em;
+  }
 
-}
-
-a:link {
-    color: #000000
-}
-
-a:visited {
-    color: #006600
-}
-
-a:hover {
-    color: #FFCC00
-}
-
-a:active {
-    color: #FF00CC
-}
-
-div#view {
-    position: absolute;
-    width: 600px;
-    height: 200px;
-    z-index: 15;
-    top:20%;
-    left: 20%;
-}
-
-/*.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
-}*/
-table, th, td {
-    border: 1px solid black;
-}
-
-table tr,td {
-    padding: 0.5px;
-}
-
-input.ng-invalid {
-    background-color: pink;
-}
-
-input.ng-valid {
-    background-color: lightgreen;
-}
-input {
-    padding: 8px;
-}
-#list td{
-    padding: 10px;
-}
+  .btn_div {
+      background-color: #666666
+  }
