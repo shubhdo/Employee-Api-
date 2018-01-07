@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp').service('dataService', function ($q, $http) {
-
+app.service('dataService', function ($q, $http) {
+    var baseUrl='http://localhost:3001/api/v1/user/'
     var self = this;
     self.signup = function (data) {
-        return self.httpData('POST','',data);
+        return self.httpData('POST',baseUrl+"signup",data);
     }
 
     self.login = function (data) {
-        return self.httpData('POST','',data);
+        return self.httpData('POST',baseUrl+'login',data);
     }
 
     self.httpData = function (method, url, data) {
