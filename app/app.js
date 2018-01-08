@@ -14,9 +14,17 @@ var app= angular.module('myApp', ['ngRoute','toastr'])
             templateUrl: 'home/home.html',
             controller: 'homeController'
         })
+        .when('/profile', {
+            templateUrl: 'profile/profile.html',
+            controller: 'profileController'
+        })
         .when('/signup', {
             templateUrl: 'signup/signup.html',
             controller: 'signupController'
         })
-        .otherwise({redirectTo: '/signup'});
+        .when('/account_settings', {
+            templateUrl: 'account_settings/account_settings.html',
+            controller: 'accountController'
+        })
+        .otherwise({redirectTo: '/account_settings'});
     }])

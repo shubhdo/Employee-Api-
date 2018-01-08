@@ -1,0 +1,164 @@
+<main>
+    <h1 class="title">HEALTH TRACKER</h1>
+    <p class="home_tabs">PROFILE SETUP</p>
+    <div>
+        <img src="{{obj.image}}" width="150" style="border-radius: 50%" id="OpenImgUpload">
+        <input type="file" class="c_file" accept="image/*" id="imgupload" onchange="angular.element(this).scope().imageUpload(this)">
+    </div>
+    </div>
+    <form name="profile">
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>FIRST NAME</label>
+                </div>
+                <div class="col-sm-8">
+
+                    <input type="text" name="firstname" required class="form-control" ng-model="obj.firstname">
+                    <span ng-show='profile.firstname.$dirty&&profile.firstname.$invalid'>
+                        Please enter first name
+
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>LAST NAME</label>
+                </div>
+                <div class="col-sm-8">
+
+                    <input type="text" name="lastname" required class="form-control" ng-model="obj.lastname">
+                    <span ng-show='profile.lastname.$dirty&&profile.lastname.$invalid'>
+                        Please enter last name
+
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>DATE OF BIRTH</label>
+                </div>
+                <div class="col-sm-8">
+
+
+                    <input type="date" name="dob" required class="form-control" ng-model="obj.dob">
+                    <span ng-show='profile.dob.$dirty&&profile.dob.$invalid'>
+                        Please enter date
+
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>GENDER</label>
+                </div>
+                <div class="col-sm-8">
+                    <select name="gender" class="form-control" ng-model="obj.gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>WEIGHT</label>
+                </div>
+                <div class="col-sm-8">
+
+                    <input type="text" name="weight" required class="form-control" ng-model="obj.weight">
+                    <span ng-show='profile.weight.$dirty&&profile.weight.$invalid'>
+                        Please enter weight
+
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>HEIGHT</label>
+                </div>
+                <div class="col-sm-8">
+
+
+                    <input type="text" name="height" required class="form-control" ng-model="obj.height">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>BMI</label>
+                </div>
+                <div class="col-sm-8">
+
+
+                    <input type="text" name="bmi" required class="form-control" ng-model="obj.bmi">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>PHONE</label>
+                </div>
+                <div class="col-sm-8">
+
+
+                    <input type="text" name="phone" required class="form-control" ng-model="obj.phone">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label>EMAIL</label>
+                </div>
+                <div class="col-sm-8">
+
+
+                    <input type="email" name="email" required class="form-control" ng-model="obj.email">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" ng-click="editProfle()" ng-disabled="profile.$invalid" class="btn-lg btn btn-default form-control">
+        </div>
+    </form>
+
+<ol class="info">
+<li>BMI Categories</li>    
+<li>Underweight = <18.5</li>
+<li>Normal weight = 18.5–24.9 </li>
+<li>Overweight = 25–29.9 </li>
+<li>Obesity = BMI of 30 or greater</li>
+</ol>    
+
+</main>
+

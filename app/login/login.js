@@ -9,9 +9,10 @@ app.controller('loginController',function ($scope,dataService,toastr) {
                 console.log(result);
                 if(result.data.responseCode==400 ||result.data.responseCode=='400'|| result.data.responseCode==500)
                 toastr.error(result.data.responseMessage);
-                else
+                else {
                 toastr.success(result.data.responseMessage)
-
+                localStorage.setItem('userId',result.data.result._id)
+                }
             })
             .catch((failed) => {
                 console.log(failed);

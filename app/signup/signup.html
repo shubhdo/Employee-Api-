@@ -88,5 +88,10 @@
             <input type="submit" ng-click="signUp()" ng-disabled="signup.$invalid" class="btn-lg btn btn-default form-control">
         </div>
     </form>
+    <div ng-if="success">
+        Your registration is successful! We now need to verify your email address. We’ve send an email to {{obj.email}} to verify your address. Please click the link in that email.
+        
+        
+    </div>
 
 </main>

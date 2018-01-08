@@ -29,3 +29,20 @@ body {
   .btn_div {
       background-color: #666666
   }
+
+  .info {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    bottom: 300px;
+    left: 400px;
+  }
+
+  info_settings {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    bottom: 300px;
+    right: 400px;
+    display: block;
+  }

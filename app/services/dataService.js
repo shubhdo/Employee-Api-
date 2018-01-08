@@ -2,6 +2,7 @@
 
 app.service('dataService', function ($q, $http) {
     var baseUrl='http://localhost:3001/api/v1/user/'
+    var userId=localStorage.getItem('userId');
     var self = this;
     self.signup = function (data) {
         return self.httpData('POST',baseUrl+"signup",data);
@@ -9,6 +10,10 @@ app.service('dataService', function ($q, $http) {
 
     self.login = function (data) {
         return self.httpData('POST',baseUrl+'login',data);
+    }
+
+    self.editProfile = function (data) {
+        return self.httpData('POST',baseUrl+'editProfile/'+userId,data)
     }
 
     self.httpData = function (method, url, data) {
