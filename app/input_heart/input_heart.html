@@ -1,10 +1,7 @@
-
-
 <main>
     <h1 class="title">INPUT SENSOR</h1>
-    <p class="home_tabs">SENSOR 2 - TEMPERATURE</p>
-    <p class="home_tabs">Please manually enter your temperature for today in the text box below (specify in celsius):
-        
+    <p class="home_tabs">SENSOR 1 - HEART RATE</p>
+    <p class="home_tabs">Please manually enter your heart rate for today in the text box below (specify in hours):
     </p>
     <form name="input_temp">
 
@@ -27,13 +24,13 @@
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-4">
-                    <label>TEMPERATURE</label>
+                    <label>HEART RATE</label>
                 </div>
                 <div class="col-sm-8">
 
-                    <input type="text" name="temperature" required class="form-control" ng-model="obj.data">
-                    <span ng-show='input_temp.temperature.$dirty&&input_temp.temperature.$invalid'>
-                            Please enter temperature
+                    <input type="text" name="heart_rate" required class="form-control" ng-model="obj.data">
+                    <span ng-show='input_temp.heart_rate.$dirty&&input_temp.heart_rate.$invalid'>
+                            Please enter heart rate
     
                         </span>
                 </div>
@@ -42,7 +39,7 @@
 
 
         <div>
-            <input type="submit" ng-click="input_temp()" ng-disabled="input_temp.$invalid" class="btn-lg btn btn-default form-control">
+            <input type="submit" ng-click="input_heart()" ng-disabled="input_temp.$invalid" class="btn-lg btn btn-default form-control">
         </div>
     </form>
   

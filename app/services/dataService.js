@@ -16,6 +16,14 @@ app.service('dataService', function ($q, $http) {
         return self.httpData('POST',baseUrl+'editProfile/'+userId,data)
     }
 
+    self.addTemperature = function (data) {
+        return self.httpData('POST',baseUrl+'addTempreature/'+userId,data)
+    }
+
+    self.addHeartRate = function (data) {
+        return self.httpData('POST',baseUrl+'addHeartRate/'+userId,data)
+    }
+
     self.httpData = function (method, url, data) {
         return $q(function (resolve, reject) {
             $http({

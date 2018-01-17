@@ -1,10 +1,11 @@
 'use strict';
 
-app.controller('inputTempController',function ($scope,dataService,toastr) {
+app.controller('inputHeartController',function ($scope,dataService,toastr) {
     $scope.obj={}
-    $scope.input_temp = function() {
+    $scope.obj={}
+    $scope.input_heart = function() {
         console.log($scope.obj);
-        dataService.addTemperature($scope.obj)
+        dataService.addHeartRate($scope.obj)
         .then((result)=> {
             console.log(result);
         })

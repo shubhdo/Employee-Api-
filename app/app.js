@@ -26,5 +26,13 @@ var app= angular.module('myApp', ['ngRoute','toastr'])
             templateUrl: 'account_settings/account_settings.html',
             controller: 'accountController'
         })
+        .when('/input_temp', {
+            templateUrl: 'input_temp/input_temp.html',
+            controller: 'inputTempController'
+        })
+        .when('/input_heart', {
+            templateUrl: 'input_heart/input_heart.html',
+            controller: 'inputHeartController'
+        })
         .otherwise({redirectTo: '/account_settings'});
     }])
